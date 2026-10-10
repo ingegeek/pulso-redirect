@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Pulso · volviendo a la app</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="font-family:system-ui;max-width:32rem;margin:4rem auto;padding:0 1rem;color:#222">
+<h3>Pulso</h3>
+<p id="m">Volviendo a la app Pulso…</p>
+<script>
+// Reenvía el código de autorización al motor local de Pulso (solo en tu Mac).
+// No guarda nada: la query string pasa tal cual.
+location.replace("http://127.0.0.1:8765/api/connect/tiktok/callback" + location.search);
+setTimeout(function () {
+  document.getElementById("m").textContent =
+    "No se pudo abrir Pulso. Asegúrate de que la app esté abierta en este Mac y vuelve a intentar la conexión.";
+}, 4000);
+</script>
+</body></html>
